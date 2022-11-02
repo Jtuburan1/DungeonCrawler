@@ -108,7 +108,7 @@
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
--r:"C:/Users/Bossman/Desktop/Dungeon Crawler/Dungeon Crawler/Library/PackageCache/com.unity.cinemachine@2.7.9/Runtime/ThirdParty/clipper_library.dll"
+-r:"C:/Users/Bossman/Desktop/Dungeon Crawler/DungeonCrawler/Library/PackageCache/com.unity.cinemachine@2.7.9/Runtime/ThirdParty/clipper_library.dll"
 -r:"C:/Users/Bossman/Desktop/Unity Project/2021.1.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"C:/Users/Bossman/Desktop/Unity Project/2021.1.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
 -r:"C:/Users/Bossman/Desktop/Unity Project/2021.1.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.dll"
@@ -325,6 +325,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/GameManager/GameResources.cs"
+"Assets/Scripts/Misc/Settings.cs"
 "Assets/Scripts/NodeGraph/RoomNodeGraphSO.cs"
 "Assets/Scripts/NodeGraph/RoomNodeSO.cs"
 "Assets/Scripts/NodeGraph/RoomNodeTypeListSO.cs"

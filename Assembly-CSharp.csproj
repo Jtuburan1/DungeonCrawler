@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C2091AD8-3776-BC7A-F4D4-D83353F43729}</ProjectGuid>
+    <ProjectGuid>{AB5532A4-EBEC-0F95-E7F0-E88FC1165F30}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\NodeGraph\RoomNodeTypeListSO.cs" />
     <Compile Include="Assets\Scripts\NodeGraph\RoomNodeTypeSO.cs" />
     <Compile Include="Assets\Scripts\NodeGraph\RoomNodeGraphSO.cs" />
+    <Compile Include="Assets\Scripts\Misc\Settings.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
