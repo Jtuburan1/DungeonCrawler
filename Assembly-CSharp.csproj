@@ -56,16 +56,27 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\GameManager\GameManager.cs" />
     <Compile Include="Assets\Scripts\Utilities\HelperUtilities.cs" />
     <Compile Include="Assets\Scripts\NodeGraph\RoomNodeSO.cs" />
     <Compile Include="Assets\Scripts\Misc\Settings.cs" />
     <Compile Include="Assets\Scripts\GameManager\GameResources.cs" />
     <Compile Include="Assets\Scripts\NodeGraph\RoomNodeTypeListSO.cs" />
+    <Compile Include="Assets\Scripts\Misc\SingletonMonobehavior.cs" />
+    <Compile Include="Assets\Scripts\Dungeon\DungeonBuilder.cs" />
+    <Compile Include="Assets\Scripts\Dungeon\RoomTemplateSO.cs" />
+    <Compile Include="Assets\Scripts\Dungeon\DungeonLevelSO.cs" />
+    <Compile Include="Assets\Scripts\Dungeon\InstantiatedRoom.cs" />
     <Compile Include="Assets\Scripts\NodeGraph\RoomNodeTypeSO.cs" />
     <Compile Include="Assets\Scripts\NodeGraph\RoomNodeGraphSO.cs" />
+    <Compile Include="Assets\Scripts\Dungeon\Room.cs" />
     <Compile Include="Assets\Scripts\Enums\Enums.cs" />
     <Compile Include="Assets\Scripts\Dungeon\Doorway.cs" />
-    <Compile Include="Assets\Scripts\Dungeon\RoomTemplateSO.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerDetailsSO.cs" />
+    <Compile Include="Assets\Scripts\Player\CurrentPlayerSO.cs" />
+    <Compile Include="Assets\Scripts\Health\Health.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Misc\CinemachineTarget.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

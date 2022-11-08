@@ -1,12 +1,10 @@
-using UnityEngine;
+﻿using UnityEngine;
 [System.Serializable]
-
-public class Doorway
+public class Doorway 
 {
     public Vector2Int position;
     public Orientation orientation;
     public GameObject doorPrefab;
-
     #region Header
     [Header("The Upper Left Position To Start Copying From")]
     #endregion
@@ -23,6 +21,4 @@ public class Doorway
     public bool isConnected = false;
     [HideInInspector]
     public bool isUnavailable = false;
-
-
 }

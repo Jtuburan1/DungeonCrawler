@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Coordinate Brush
   m_EditorClassIdentifier: 
   m_Cells:
-  - m_Tile: {fileID: 11400000, guid: 0a984ec682f79e04d897db6372656964, type: 2}
+  - m_Tile: {fileID: 11400000, guid: 3ce5fb260af53d24887b55c3d50041e2, type: 2}
     m_Matrix:
       e00: 1
       e01: 0
