@@ -4,8 +4,13 @@ using UnityEngine;
 
 public static class Settings
 {
-    #region ROOM SETTINGS
+    #region UNITS
+    public const float pixelsPerUnit = 16f;
+    public const float tileSizePixels = 16f;
+    #endregion
 
+    #region ROOM SETTINGS
+    public const float fadeInTime = 0.5f;
     public const int maxChildCorridors = 3; // Max number of child corridors leading from a room. - maximum should be 3 although this is not recommended since it can cause the dungeon building to fail since the rooms are more likely to not fit together;
 
     #endregion ROOM SETTINGS
@@ -29,5 +34,15 @@ public static class Settings
     public static int rollRight = Animator.StringToHash("rollRight");
     public static int rollLeft = Animator.StringToHash("rollLeft");
     public static int rollDown = Animator.StringToHash("rollDown");
+
+    public static float baseSpeedForPlayerAnimations = 8f;
+
+    public static int open = Animator.StringToHash("open");
+
+    #endregion
+
+    #region GAMEOBJECT TAGS
+    public const string playerTag = "Player";
+    public const string playerWeapon = "playerWeapon";
     #endregion
 }

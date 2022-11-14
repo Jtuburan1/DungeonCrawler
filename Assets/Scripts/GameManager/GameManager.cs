@@ -56,6 +56,22 @@ public class GameManager : SingletonMonobehavior<GameManager>
         player.Initialize(playerDetails);
     }
 
+    private void OnEnable()
+    {
+        // Subscribe to room changed event.
+        StaticEventHandler.OnRoomChanged += StaticEventHandler_OnRoomChanged;
+    }
+
+    private void OnDisable()
+    {
+        StaticEventHandler.OnRoomChanged -= StaticEventHandler_OnRoomChanged;
+    }
+
+    private void StaticEventHandler_OnRoomChanged(RoomChangedEventArgs roomChangedEventArgs)
+    {
+        SetCurrentRoom(roomChangedEventArgs.room);
+    }
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -105,6 +121,9 @@ public class GameManager : SingletonMonobehavior<GameManager>
         {
             Debug.LogError("Couldn't build dungeon from specified rooms and node graphs");
         }
+
+        // Call static event that room has changed
+        StaticEventHandler.CallRoomChangedEvent(currentRoom);
 
         // Set player roughly mid-room
         player.gameObject.transform.position = new Vector3((currentRoom.lowerBounds.x + currentRoom.upperBounds.x) / 2f, (currentRoom.lowerBounds.y + currentRoom.upperBounds.y)

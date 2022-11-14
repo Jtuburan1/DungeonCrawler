@@ -31,6 +31,17 @@ public class PlayerControl : MonoBehaviour
     private void Start()
     {
         waitForFixedUpdate = new WaitForFixedUpdate();
+
+        SetPlayerAnimationSpeed();
+    }
+
+    /// <summary>
+    /// set player animator speed to match movement speed
+    /// </summary>
+    private void SetPlayerAnimationSpeed()
+    {
+        // Set animator speed to match movement speed
+        player.animator.speed = moveSpeed / Settings.baseSpeedForPlayerAnimations;
     }
 
     private void Update()

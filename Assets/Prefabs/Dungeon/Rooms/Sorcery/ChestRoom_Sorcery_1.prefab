@@ -4868,6 +4868,7 @@ GameObject:
   - component: {fileID: 8227588318318580144}
   - component: {fileID: 1462120759972737929}
   - component: {fileID: -249947266281786000}
+  - component: {fileID: 1766365078031170570}
   m_Layer: 12
   m_Name: ChestRoom_Sorcery_1
   m_TagString: Untagged
@@ -4939,6 +4940,18 @@ MonoBehaviour:
   roomColliderBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
+--- !u!114 &1766365078031170570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4327421925113694216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5716d608dc59e444a06969a2d03c132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4561116449979205807
 GameObject:
   m_ObjectHideFlags: 0

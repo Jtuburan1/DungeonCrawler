@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\Movement\MovementByVelocityEvent.cs" />
     <Compile Include="Assets\Scripts\Misc\CinemachineTarget.cs" />
     <Compile Include="Assets\Scripts\Utilities\HelperUtilities.cs" />
+    <Compile Include="Assets\Scripts\Dungeon\Door.cs" />
     <Compile Include="Assets\Scripts\NodeGraph\RoomNodeSO.cs" />
     <Compile Include="Assets\Scripts\Misc\Settings.cs" />
     <Compile Include="Assets\Scripts\Movement\MovementToPosition.cs" />
@@ -89,6 +90,10 @@
     <Compile Include="Assets\Scripts\Misc\ScreenCursor.cs" />
     <Compile Include="Assets\Scripts\Dungeon\Doorway.cs" />
     <Compile Include="Assets\Scripts\Weapons\AimWeapon.cs" />
+    <Compile Include="Assets\Scripts\StaticEvents\StaticEventHandler.cs" />
+    <Compile Include="Assets\Scripts\Dungeon\DoorLightingControl.cs" />
+    <Compile Include="Assets\Scripts\Dungeon\RoomLightingControl.cs" />
+    <Compile Include="Assets\Scripts\PoolManager\PoolManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

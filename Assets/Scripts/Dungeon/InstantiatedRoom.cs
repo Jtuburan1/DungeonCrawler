@@ -28,6 +28,21 @@ public class InstantiatedRoom : MonoBehaviour
         roomColliderBounds = boxCollider2D.bounds;
     }
 
+    // Trigger room changed event when player enters a room
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // If the player triggered the collider
+        if (collision.tag == Settings.playerTag && room != GameManager.Instance.GetCurrentRoom())
+        {
+            // Set room as visited
+            this.room.isPreviouslyVisited = true;
+
+            // call room changed event
+            StaticEventHandler.CallRoomChangedEvent(room);
+        }
+        
+    }
+
     /// <summary>
     /// Initialise the instantiated room
     /// </summary>
@@ -38,8 +53,59 @@ public class InstantiatedRoom : MonoBehaviour
 
         BlockOffUnusedDoorWays();
 
+        AddDoorsToRooms();
+
         DisableCollisionTilemapRenderer();
 
+    }
+
+    /// <summary>
+    /// Add opening doors if this is not a corridor room
+    /// </summary>
+    /// <exception cref="NotImplementedException"></exception>
+    private void AddDoorsToRooms()
+    {
+        if (room.roomNodeType.isCorridorEW || room.roomNodeType.isCorridorNS) return;
+
+        foreach(Doorway doorway in room.doorwayList)
+        {
+            if(doorway.doorPrefab != null && doorway.isConnected)
+            {
+                float tileDistance = Settings.tileSizePixels / Settings.pixelsPerUnit;
+
+                GameObject door = null;
+
+                if(doorway.orientation == Orientation.north)
+                {
+                    door = Instantiate(doorway.doorPrefab, gameObject.transform);
+                    door.transform.localPosition = new Vector3(doorway.position.x + tileDistance / 2f, doorway.position.y + tileDistance, 0f);
+                }
+                else if (doorway.orientation == Orientation.south)
+                {
+                    door = Instantiate(doorway.doorPrefab, gameObject.transform);
+                    door.transform.localPosition = new Vector3(doorway.position.x + tileDistance / 2f, doorway.position.y, 0f);
+                }
+                else if (doorway.orientation == Orientation.east)
+                {
+                    door = Instantiate(doorway.doorPrefab, gameObject.transform);
+                    door.transform.localPosition = new Vector3(doorway.position.x + tileDistance, doorway.position.y + tileDistance * 1.25f, 0f);
+                }
+                else if(doorway.orientation == Orientation.west)
+                {
+                    door = Instantiate(doorway.doorPrefab, gameObject.transform);
+                    door.transform.localPosition = new Vector3(doorway.position.x, doorway.position.y + tileDistance * 1.25f, 0f);
+                }
+
+                Door doorComponent = door.GetComponent<Door>();
+
+                if(room.roomNodeType.isBossRoom)
+                {
+                    doorComponent.isBossRoomDoor = true;
+
+                    doorComponent.LockDoor();
+                }
+            }
+        }
     }
 
     /// <summary>
